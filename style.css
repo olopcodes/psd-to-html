@@ -11,6 +11,7 @@
   --color: #f2ac32;
   --color-2: #f2e832;
   --white: white;
+  --light-gray: #f4eded;
 }
 
 * {
@@ -41,6 +42,10 @@ ul {
   list-style: none;
 }
 
+section {
+  padding: 6rem 0;
+}
+
 .container-alt {
   width: 90%;
   max-width: 80rem;
@@ -49,6 +54,10 @@ ul {
 }
 
 .container {
+  width: 90%;
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* header/banner/nav */
@@ -147,12 +156,12 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .banner .circle {
-  width: 1rem;
-  height: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: var(--white);
   cursor: pointer;
@@ -161,3 +170,91 @@ ul {
 .circle.active {
   background-color: var(--color);
 }
+
+/* header/banner/nav */
+
+/* about ========== */
+.about {
+  background-color: var(--light-gray);
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
+
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 2rem; */
+}
+
+.about .about-card {
+  flex: 0 0 30%;
+  background-color: var(--white);
+  height: 25rem;
+}
+
+.about-card:first-of-type {
+  padding: 2.5rem;
+  position: relative;
+}
+
+.about-card:first-of-type::before {
+  content: "";
+  border: 1.5px solid var(--color);
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.about-card-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.85rem;
+  color: var(--color);
+  font-family: var(--logo-font);
+}
+
+.about-card p {
+  line-height: 1.5;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.about-link {
+  color: var(--color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.about-link i {
+  font-size: 0.85rem;
+  transition: all 0.25s;
+}
+
+.about-link:hover i {
+  transform: translateX(0.4rem);
+}
+
+.about .about-card-2 {
+  background: url(./images/about-img-not-resized-1.jpg);
+  background-size: cover;
+}
+
+.about .about-card-3 {
+  background: url(./images/about-img-not-resized-2.jpg);
+  background-size: cover;
+}
+
+.about-card:first-of-type,
+.about-card:last-of-type {
+  transform: translateY(3rem);
+}
+
+/* about ========== */
