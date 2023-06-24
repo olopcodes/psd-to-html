@@ -1,0 +1,163 @@
+:root {
+  --logo-font: "Abril Fatface", cursive;
+  --heading-font: "Frank Ruhl Libre", serif;
+  --reg-font: "Fira Sans", sans-serif;
+  --fw-bold: 700;
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-med-light: 500;
+  --fw-med: 600;
+
+  --color: #f2ac32;
+  --color-2: #f2e832;
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--reg-font);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-alt {
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container {
+}
+
+/* header/banner/nav */
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./images/banner-img-not-resized.jpg);
+  background-size: cover;
+  background-position: center 60%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.banner-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.banner .logo {
+  font-family: var(--logo-font);
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.banner-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-list-item {
+  text-transform: capitalize;
+  font-family: var(--heading-font);
+  font-weight: var(--fw-med-light);
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.banner-list-item a {
+  color: white;
+}
+
+.banner-list-item a:hover {
+  color: var(--color);
+}
+
+.banner-text-box {
+  max-width: 25rem;
+  margin: 10rem auto 0;
+  /* border: 1px salmon solid; */
+}
+
+.banner-title {
+  font-family: var(--logo-font);
+  color: var(--color);
+  letter-spacing: 5px;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.banner-text {
+  font-size: 1.5rem;
+  color: var(--white);
+  line-height: 1.2;
+  font-family: var(--heading-font);
+  margin-bottom: 4rem;
+}
+
+.banner-text span {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.banner .btn {
+  background-color: var(--color);
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.banner .btn:hover {
+  opacity: 0.9;
+}
+
+.banner .slider {
+  width: 10rem;
+  height: 2rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 95%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner .circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: var(--color);
+}
