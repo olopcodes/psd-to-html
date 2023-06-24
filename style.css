@@ -1,7 +1,7 @@
 :root {
-  --logo-font: "Abril Fatface", cursive;
-  --heading-font: "Frank Ruhl Libre", serif;
-  --reg-font: "Fira Sans", sans-serif;
+  --heading-font: "Abril Fatface", cursive;
+  --reg-font: "Frank Ruhl Libre", serif;
+
   --fw-bold: 700;
   --fw-light: 300;
   --fw-reg: 400;
@@ -9,6 +9,7 @@
   --fw-med: 600;
 
   --color: #f2ac32;
+  --color-rgb: rgb(242, 172, 50);
   --color-2: #f2e832;
   --white: white;
   --light-gray: #f4eded;
@@ -60,6 +61,14 @@ section {
   padding: 0 1rem;
 }
 
+.section-title {
+  color: var(--color);
+  font-size: 3rem;
+  font-family: var(--heading-font);
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
 /* header/banner/nav */
 .banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -79,7 +88,7 @@ section {
 }
 
 .banner .logo {
-  font-family: var(--logo-font);
+  font-family: var(--heading-font);
   text-decoration: none;
   font-size: 2.5rem;
   color: white;
@@ -93,7 +102,7 @@ section {
 
 .banner-list-item {
   text-transform: capitalize;
-  font-family: var(--heading-font);
+  font-family: var(--reg-font);
   font-weight: var(--fw-med-light);
   font-size: 1.25rem;
   color: var(--white);
@@ -114,7 +123,7 @@ section {
 }
 
 .banner-title {
-  font-family: var(--logo-font);
+  font-family: var(--heading-font);
   color: var(--color);
   letter-spacing: 5px;
   font-size: 4rem;
@@ -125,7 +134,7 @@ section {
   font-size: 1.5rem;
   color: var(--white);
   line-height: 1.2;
-  font-family: var(--heading-font);
+  font-family: var(--reg-font);
   margin-bottom: 4rem;
 }
 
@@ -176,11 +185,11 @@ section {
 /* about ========== */
 .about {
   background-color: var(--light-gray);
-  height: 40rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 10rem;
+  padding: 10rem 1rem 18rem;
 }
 
 .about .container {
@@ -216,7 +225,7 @@ section {
   margin-bottom: 1.5rem;
   font-size: 1.85rem;
   color: var(--color);
-  font-family: var(--logo-font);
+  font-family: var(--heading-font);
 }
 
 .about-card p {
@@ -258,3 +267,91 @@ section {
 }
 
 /* about ========== */
+
+/* services ===================*/
+.services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
+    url(./images/services-banner-not-resized.jpg);
+  background-size: cover;
+  color: var(--white);
+  text-align: center;
+  -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+  padding: 14rem 1rem 18rem;
+  transform: translateY(-8rem);
+}
+
+.services .section-title {
+  margin-bottom: 0;
+}
+
+.services p {
+  font-size: 1.85rem;
+  margin-bottom: 5rem;
+}
+
+.services .services-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.services-box div {
+  height: 15rem;
+  position: relative;
+  background-color: rgba(242, 172, 50, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-box div:hover img {
+  opacity: 0;
+}
+
+.services-box::before {
+  content: "";
+  width: 85%;
+  height: 12rem;
+  border: 1.5px solid var(--white);
+  top: 1.25rem;
+  left: 1.25rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.services-box a {
+  color: var(--white);
+  text-transform: capitalize;
+  font-weight: var(--fw-med);
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.services-box a:hover {
+  text-decoration: underline;
+}
+
+.services-box img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.services-boxes .services-box {
+  position: relative;
+}
+
+.services-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* services ===================*/
