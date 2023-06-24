@@ -281,5 +281,39 @@
       </div>
     </section>
     <!-- menu -->
+
+    <!-- book table -->
+    <section class="book" id="book">
+      <div class="container">
+        <h2 class="section-title">book your table</h2>
+
+        <form class="book-form">
+          <div>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required />
+          </div>
+
+          <div>
+            <label for="time">Time:</label>
+            <input type="time" name="time" id="time" required />
+          </div>
+
+          <div>
+            <label for="people">People:</label>
+            <input
+              type="number"
+              min="1"
+              max="25"
+              required
+              id="people"
+              name="people"
+            />
+          </div>
+
+          <input type="submit" placeholder="Find table" value="Find Table" />
+        </form>
+      </div>
+    </section>
+    <!-- book table -->
   </body>
 </html>
