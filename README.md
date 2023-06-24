@@ -6,6 +6,8 @@ Images are not resized and the site is desktop only, not responsive.
 
 Here is the link to part 1 of a 6 part tutorial [PSD to HTML video](https://www.youtube.com/watch?v=W9uSI9SZEJI&list=PLD9SRxG6ST3E95D9P1C6z21RIoKrthcks&index=1)
 
+Here is a link to the site [psdtohtml](https://olopcodes.github.io/psd-to-html/)
+
 ## Technologies
 
 - HTML
